@@ -1,6 +1,8 @@
 import styles from "@/app/page.module.css"
 import {MinimizeIcon} from "@/components/icons/MinimizeIcon";
 import {useEffect} from "react";
+import {COLORS} from "@/values/colors";
+import {useState} from "react";
 
 export default function ButtonMinimize() {
     useEffect(() => {
@@ -10,11 +12,11 @@ export default function ButtonMinimize() {
         button.addEventListener('click', () => appWindow.minimize());
 
         return () => {
-           button.removeEventListener('click', () => appWindow.minimize());
+            button.removeEventListener('click', () => appWindow.minimize());
         };
     }, []);
 
     return (
-        <button className={styles.titlebarbutton} id="button-minimize"><MinimizeIcon color="#8C93A8" /></button>
+        <button className={styles.titlebarbuttonright} id="button-minimize"><MinimizeIcon size={28} color={COLORS.mainhighlight} /></button>
     );
 }

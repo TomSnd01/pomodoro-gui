@@ -2,10 +2,10 @@
 
 import styles from "./page.module.css"
 
-export default function Home() {
+export default function Settings() {
     return (
         <main className={styles.home}>
-            <h1>Home</h1>
+            <h1>Settings</h1>
         </main>
     );
 }

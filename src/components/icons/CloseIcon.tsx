@@ -1,13 +1,14 @@
 import React from 'react';
 
 type CustomIconProps = {
+    size: number;
     color: string;
 };
 
-export const CloseIcon = ({color}: CustomIconProps) => (
+export const CloseIcon = ({size, color}: CustomIconProps) => (
     <svg xmlns="http://www.w3.org/2000/svg"
-         width="22"
-         height="22"
+         width={size}
+         height={size}
          viewBox="0 0 24 24"
          fill={color}
          stroke={color}

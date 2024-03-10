@@ -5,7 +5,7 @@ type CustomIconProps = {
     color: string;
 };
 
-export const MinimizeIcon = ({size, color}: CustomIconProps) => (
+export const InfoIcon = ({size, color}: CustomIconProps) => (
     <svg xmlns="http://www.w3.org/2000/svg"
          width={size}
          height={size}
@@ -15,8 +15,10 @@ export const MinimizeIcon = ({size, color}: CustomIconProps) => (
          strokeWidth="1.7"
          strokeLinecap="round"
          strokeLinejoin="round"
-         className="feather feather-chevron-down">
-        <polyline points="6 9 12 15 18 9"></polyline>
+         className="feather feather-info">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="12" y1="16" x2="12" y2="12"></line>
+        <line x1="12" y1="8" x2="12.01" y2="8"></line>
     </svg>
 )
 

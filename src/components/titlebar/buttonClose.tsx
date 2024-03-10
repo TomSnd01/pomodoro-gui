@@ -1,6 +1,7 @@
 import styles from "@/app/page.module.css"
 import {CloseIcon} from "@/components/icons/CloseIcon";
 import {useEffect} from "react";
+import {COLORS} from "@/values/colors";
 
 export default function ButtonClose() {
 useEffect(() => {
@@ -15,6 +16,6 @@ useEffect(() => {
     }, []);
 
     return (
-        <button className={styles.titlebarbutton} id="button-close"><CloseIcon color="#8C93A8" /></button>
+        <button className={styles.titlebarbuttonright} id="button-close"><CloseIcon size={22} color={COLORS.mainhighlight} /></button>
     );
 }

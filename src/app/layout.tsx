@@ -1,22 +1,18 @@
-import type { Metadata } from "next";
+'use client'
+
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Titlebar from "@/components/titlebar/titlebar";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "Pomodoro",
-  description: "Tauri pomodoro app",
-};
-
-export default function RootLayout({
-                                     children,
-                                   }: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({children}: Readonly<{ children: React.ReactNode; }>) {
   return (
       <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Titlebar />
+        {children}
+      </body>
       </html>
   );
 }
