@@ -1,18 +1,16 @@
 import styles from "@/app/page.module.css"
 import {SettingsIcon} from "@/components/icons/SettingsIcon";
 import {COLORS} from "@/values/colors";
-import { useRouter, usePathname } from "next/navigation";
+import {MouseEventHandler} from "react";
 
-export default function ButtonSettings() {
-    const router = useRouter();
-    const pathname = usePathname();
+type CustomIconProps = {
+    onClick: MouseEventHandler<HTMLButtonElement>;
+    isActive: boolean;
+}
 
-    const navigate = () => {
-        const targetRoute = pathname === '/settings' ? '/' : '/settings'
-        router.push(targetRoute);
-    }
-
+export default function ButtonSettings({onClick, isActive}: CustomIconProps) {
     return (
-        <button onClick={navigate} className={styles.titlebarbuttonleft} id="button-settings"><SettingsIcon size={18} color={COLORS.mainhighlight} /></button>
+        <button onClick={onClick} className={styles.titlebarbuttonleft} id="button-settings">
+            <SettingsIcon size={18} color={isActive ? COLORS.otherhighlight : COLORS.mainhighlight} /></button>
     );
 }
