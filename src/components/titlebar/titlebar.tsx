@@ -3,7 +3,7 @@ import ButtonMinimize from "@/components/titlebar/buttonMinimize";
 import ButtonClose from "@/components/titlebar/buttonClose";
 import ButtonSettings from "@/components/titlebar/buttonSettings";
 import ButtonInfo from "@/components/titlebar/buttonInfo";
-import {usePathname, useRouter} from "next/navigation";
+import {useRouter} from "next/navigation";
 import {useState} from "react";
 
 export default function Titlebar() {

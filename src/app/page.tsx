@@ -1,11 +1,12 @@
 'use client'
 
 import styles from "./page.module.css"
+import ProgressBar from "@/components/home/progressBar";
 
 export default function Home() {
     return (
         <main className={styles.home}>
-            <h1>Home</h1>
+            <ProgressBar work={true} percentage={66}/>
         </main>
     );
 }

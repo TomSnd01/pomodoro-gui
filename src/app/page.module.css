@@ -36,6 +36,8 @@
 
 .titlebartext {
     text-align: center;
+    color: var(--other-highlight);
+    padding: 4px;
 }
 
 .home {
