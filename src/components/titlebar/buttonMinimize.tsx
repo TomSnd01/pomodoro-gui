@@ -1,22 +1,23 @@
-import styles from "@/app/page.module.css"
-import {MinimizeIcon} from "@/components/icons/MinimizeIcon";
-import {useEffect} from "react";
-import {COLORS} from "@/values/colors";
-import {useState} from "react";
+import styles from "@/app/page.module.css";
+import { MinimizeIcon } from "@/components/icons/MinimizeIcon";
+import { useEffect } from "react";
+import { COLORS } from "@/values/colors";
 
 export default function ButtonMinimize() {
-    useEffect(() => {
-        const appWindow = require("@tauri-apps/api/window").appWindow;
+  useEffect(() => {
+    const appWindow = require("@tauri-apps/api/window").appWindow;
 
-        const button = document.getElementById('button-minimize')!;
-        button.addEventListener('click', () => appWindow.minimize());
+    const button = document.getElementById("button-minimize")!;
+    button.addEventListener("click", () => appWindow.minimize());
 
-        return () => {
-            button.removeEventListener('click', () => appWindow.minimize());
-        };
-    }, []);
+    return () => {
+      button.removeEventListener("click", () => appWindow.minimize());
+    };
+  }, []);
 
-    return (
-        <button className={styles.titlebarbuttonright} id="button-minimize"><MinimizeIcon size={28} color={COLORS.mainhighlight} /></button>
-    );
+  return (
+    <button className={styles.titlebarbuttonright} id="button-minimize">
+      <MinimizeIcon size={28} color={COLORS.mainhighlight} />
+    </button>
+  );
 }
