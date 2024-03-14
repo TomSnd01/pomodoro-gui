@@ -1,13 +1,14 @@
-import { CircularProgressbarWithChildren, buildStyles } from "react-circular-progressbar";
+import {CircularProgressbarWithChildren} from "react-circular-progressbar";
 import 'react-circular-progressbar/dist/styles.css'
 import {COLORS} from "@/values/colors";
 
 type CustomIconProps = {
     work: boolean;
     percentage: number;
+    timer: string;
 }
 
-export default function ProgressBar({work, percentage}: CustomIconProps) {
+export default function ProgressBar({work, percentage, timer}: CustomIconProps) {
     const color = work ? COLORS.work : COLORS.break;
 
     return (
@@ -16,7 +17,11 @@ export default function ProgressBar({work, percentage}: CustomIconProps) {
             strokeWidth={5}
             styles={{
                 root: {
-                    blockSize: 200,
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    height: 200,
+                    width: 200
                 },
                 path: {
                     stroke: color,
@@ -27,6 +32,7 @@ export default function ProgressBar({work, percentage}: CustomIconProps) {
             }}
             counterClockwise
         >
+            <div style={{fontSize: 40}}>{timer}</div>
         </CircularProgressbarWithChildren>
     )
 }
