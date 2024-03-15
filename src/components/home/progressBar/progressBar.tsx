@@ -3,21 +3,19 @@ import "react-circular-progressbar/dist/styles.css";
 import { COLORS } from "@/values/colors";
 
 type CustomIconProps = {
-  work: boolean;
+  working: boolean;
   percentage: number;
   timer: string;
-  cycleName: string;
   cycleCount: string;
 };
 
 export default function ProgressBar({
-  work,
+  working,
   percentage,
   timer,
-  cycleName,
   cycleCount,
 }: CustomIconProps) {
-  const color = work ? COLORS.work : COLORS.break;
+  const color = working ? COLORS.work : COLORS.break;
 
   return (
     <CircularProgressbarWithChildren
@@ -30,6 +28,7 @@ export default function ProgressBar({
           alignItems: "center",
           height: 200,
           width: 200,
+          margin: 20,
         },
         path: {
           stroke: color,
@@ -40,7 +39,7 @@ export default function ProgressBar({
       }}
       counterClockwise
     >
-      <div style={{ fontSize: 20 }}>{cycleName}</div>
+      <div style={{ fontSize: 20 }}>{working ? "Focus" : "Break"}</div>
       <div style={{ fontSize: 40 }}>{timer}</div>
       <div style={{ fontSize: 20 }}>{cycleCount}</div>
     </CircularProgressbarWithChildren>
