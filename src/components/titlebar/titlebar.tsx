@@ -1,4 +1,4 @@
-import styles from "@/app/page.module.css";
+import styles from "@/components/titlebar/page.module.css";
 import ButtonMinimize from "@/components/titlebar/buttonMinimize";
 import ButtonClose from "@/components/titlebar/buttonClose";
 import ButtonSettings from "@/components/titlebar/buttonSettings";

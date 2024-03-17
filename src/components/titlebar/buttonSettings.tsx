@@ -1,5 +1,5 @@
-import styles from "@/app/page.module.css";
-import { SettingsIcon } from "@/components/icons/SettingsIcon";
+import styles from "@/components/titlebar/page.module.css";
+import { SettingsIcon } from "@/components/icons/titlebar/SettingsIcon";
 import { COLORS } from "@/values/colors";
 import { MouseEventHandler } from "react";
 

@@ -1,5 +1,5 @@
-import styles from "@/app/page.module.css";
-import { MinimizeIcon } from "@/components/icons/MinimizeIcon";
+import styles from "@/components/titlebar/page.module.css";
+import { MinimizeIcon } from "@/components/icons/titlebar/MinimizeIcon";
 import { useEffect } from "react";
 import { COLORS } from "@/values/colors";
 

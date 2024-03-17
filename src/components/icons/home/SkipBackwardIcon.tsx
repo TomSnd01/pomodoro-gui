@@ -1,4 +1,5 @@
 import React from "react";
+import { COLORS } from "@/values/colors";
 
 type CustomIconProps = {
   size: number;
@@ -11,7 +12,7 @@ export const SkipBackwardIcon = ({ size }: CustomIconProps) => (
     height={size}
     viewBox="0 0 24 24"
     fill="none"
-    stroke="currentColor"
+    stroke={COLORS.othermainhighlight}
     strokeWidth="2"
     strokeLinecap="round"
     strokeLinejoin="round"

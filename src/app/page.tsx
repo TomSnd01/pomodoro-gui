@@ -1,8 +1,9 @@
 "use client";
 
-import styles from "./page.module.css";
+import styles from "../components/home/page.module.css";
 import ProgressBar from "@/components/home/progressBar";
 import ControlButtons from "@/components/home/controlButtons";
+import VolumeSlider from "@/components/home/volumeSlider";
 
 export default function Home() {
   return (
@@ -13,7 +14,8 @@ export default function Home() {
         timer={"22:51"}
         cycleCount={"2/4"}
       />
-      <ControlButtons playing={true} />
+      <ControlButtons playing={false} />
+      <VolumeSlider />
     </main>
   );
 }

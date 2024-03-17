@@ -1,5 +1,5 @@
-import styles from "@/app/page.module.css";
-import { InfoIcon } from "@/components/icons/InfoIcon";
+import styles from "@/components/titlebar/page.module.css";
+import { InfoIcon } from "@/components/icons/titlebar/InfoIcon";
 import { COLORS } from "@/values/colors";
 import { MouseEventHandler } from "react";
 

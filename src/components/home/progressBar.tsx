@@ -28,13 +28,13 @@ export default function ProgressBar({
           alignItems: "center",
           height: 200,
           width: 200,
-          margin: 20,
+          marginTop: 5,
         },
         path: {
           stroke: color,
         },
         trail: {
-          stroke: "#919191",
+          stroke: COLORS.othermainhighlight,
         },
       }}
       counterClockwise

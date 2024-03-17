@@ -1,0 +1,49 @@
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    gap: 25px;
+}
+
+.volumeParent {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 6px 6px 4px 7px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 0;
+    width: auto;
+}
+
+.volumeSlider {
+    background: #0D6EFD;
+    outline: none;
+    width: 100px;
+    cursor: pointer;
+}
+
+.volumeSlider:focus {
+    outline: none;
+    border-color: transparent;
+    box-shadow: none;
+}
+
+.volumeSlider::-webkit-slider-thumb {
+    opacity: 0;
+    cursor: pointer;
+}
+
+.svgIcon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.svgIcon:hover svg {
+    stroke: white;
+}

@@ -1,5 +1,5 @@
-import styles from "@/app/page.module.css";
-import { CloseIcon } from "@/components/icons/CloseIcon";
+import styles from "@/components/titlebar/page.module.css";
+import { CloseIcon } from "@/components/icons/titlebar/CloseIcon";
 import { useEffect } from "react";
 import { COLORS } from "@/values/colors";
 
