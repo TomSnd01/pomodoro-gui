@@ -14,8 +14,14 @@ export default function VolumeSlider() {
       onMouseLeave={() => setIsHovering(false)}
     >
       <VolumeIcon size={24} />
-      {isHovering && (
-        <input type="range" min="0" max="100" className={styles.volumeSlider} />
+      {true && (
+        <input
+          type="range"
+          min="0"
+          max="100"
+          step={1}
+          className={styles.volumeSlider}
+        />
       )}
     </div>
   );

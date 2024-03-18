@@ -18,20 +18,26 @@
     flex-wrap: nowrap;
     align-items: center;
     gap: 0;
-    width: auto;
+    width: 150px;
 }
 
 .volumeSlider {
     background: #0D6EFD;
-    outline: none;
-    width: 100px;
+    outline: none !important;
+    width: 100%;
     cursor: pointer;
+    padding: 0;
 }
 
-.volumeSlider:focus {
-    outline: none;
-    border-color: transparent;
-    box-shadow: none;
+.volumeSlider::-webkit-slider-runnable-track {
+    width: 100%;
+    padding: 0;
+}
+
+.volumeSlider::-webkit-slider-runnable-track:focus {
+    outline: none !important;
+    width: 100%;
+    padding: 0;
 }
 
 .volumeSlider::-webkit-slider-thumb {
