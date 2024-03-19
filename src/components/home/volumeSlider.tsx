@@ -14,7 +14,7 @@ export default function VolumeSlider() {
       onMouseLeave={() => setIsHovering(false)}
     >
       <VolumeIcon size={24} />
-      {true && (
+      {isHovering && (
         <input
           type="range"
           min="0"
