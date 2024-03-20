@@ -1,7 +1,7 @@
 import styles from "../page.module.css";
 import { SkipBackwardIcon } from "@/components/icons/home/SkipBackwardIcon";
 
-type CustomIconProps = {};
+type CustomProps = {};
 
 export default function ButtonSkipBackward() {
   return (

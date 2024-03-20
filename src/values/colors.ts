@@ -6,4 +6,5 @@ export const COLORS = {
   focus: "#A63446",
   short_break: "#09BC8A",
   long_break: "#F18F01",
+  blue: "#0D6EFD",
 };

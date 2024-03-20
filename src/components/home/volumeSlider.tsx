@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { VolumeIcon } from "@/components/icons/home/volume/VolumeIcon";
 import styles from "./page.module.css";
 
-type CustomIconProps = {};
+type CustomProps = {};
 
 export default function VolumeSlider() {
   const [isHovering, setIsHovering] = useState(false);

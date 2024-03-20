@@ -3,12 +3,12 @@ import { InfoIcon } from "@/components/icons/titlebar/InfoIcon";
 import { COLORS } from "@/values/colors";
 import { MouseEventHandler } from "react";
 
-type CustomIconProps = {
+type CustomProps = {
   onClick: MouseEventHandler<HTMLButtonElement>;
   isActive: boolean;
 };
 
-export default function ButtonInfo({ onClick, isActive }: CustomIconProps) {
+export default function ButtonInfo({ onClick, isActive }: CustomProps) {
   return (
     <button
       onClick={onClick}

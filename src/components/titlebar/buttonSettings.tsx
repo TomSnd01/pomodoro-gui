@@ -3,12 +3,12 @@ import { SettingsIcon } from "@/components/icons/titlebar/SettingsIcon";
 import { COLORS } from "@/values/colors";
 import { MouseEventHandler } from "react";
 
-type CustomIconProps = {
+type CustomProps = {
   onClick: MouseEventHandler<HTMLButtonElement>;
   isActive: boolean;
 };
 
-export default function ButtonSettings({ onClick, isActive }: CustomIconProps) {
+export default function ButtonSettings({ onClick, isActive }: CustomProps) {
   return (
     <button
       onClick={onClick}

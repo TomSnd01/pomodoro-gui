@@ -1,7 +1,7 @@
 import styles from "../page.module.css";
 import { SkipForwardIcon } from "@/components/icons/home/SkipForwardIcon";
 
-type CustomIconProps = {};
+type CustomProps = {};
 
 export default function ButtonSkipForward() {
   return (

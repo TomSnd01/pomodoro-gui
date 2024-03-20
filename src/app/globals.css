@@ -6,8 +6,10 @@
     --background: #2A2E32;
     --main-highlight: #8C93A8;
     --other-highlight: #F18F01;
+    --other-mainhighlight: #919191;
     --work: #A63446;
     --break: #09BC8A;
+    --blue: #0D6EFD;
 }
 
 body {

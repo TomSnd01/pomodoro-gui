@@ -4,7 +4,7 @@ import { COLORS } from "@/values/colors";
 import { CyclePhase } from "@/util/enums/cyclePhase";
 import { CyclePhaseText } from "@/util/enums/cyclePhaseText";
 
-type CustomIconProps = {
+type CustomProps = {
   CyclePhase: CyclePhase;
   percentage: number;
   timer: string;
@@ -16,7 +16,7 @@ export default function ProgressBar({
   percentage,
   timer,
   cycleCount,
-}: CustomIconProps) {
+}: CustomProps) {
   const color = COLORS[CyclePhase];
 
   return (
