@@ -1,21 +1,23 @@
 import { CircularProgressbarWithChildren } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import { COLORS } from "@/values/colors";
+import { CyclePhase } from "@/util/enums/cyclePhase";
+import { CyclePhaseText } from "@/util/enums/cyclePhaseText";
 
 type CustomIconProps = {
-  working: boolean;
+  CyclePhase: CyclePhase;
   percentage: number;
   timer: string;
   cycleCount: string;
 };
 
 export default function ProgressBar({
-  working,
+  CyclePhase,
   percentage,
   timer,
   cycleCount,
 }: CustomIconProps) {
-  const color = working ? COLORS.work : COLORS.break;
+  const color = COLORS[CyclePhase];
 
   return (
     <CircularProgressbarWithChildren
@@ -39,7 +41,7 @@ export default function ProgressBar({
       }}
       counterClockwise
     >
-      <div style={{ fontSize: 20 }}>{working ? "Focus" : "Break"}</div>
+      <div style={{ fontSize: 20 }}>{CyclePhaseText[CyclePhase]}</div>
       <div style={{ fontSize: 40 }}>{timer}</div>
       <div style={{ fontSize: 20 }}>{cycleCount}</div>
     </CircularProgressbarWithChildren>
