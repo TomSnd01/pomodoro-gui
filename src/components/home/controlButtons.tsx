@@ -6,11 +6,9 @@ import ButtonPlayPause from "@/components/home/controlButtons/buttonPlayPause";
 import ButtonSkipForward from "@/components/home/controlButtons/buttonSkipForward";
 import ButtonSkipBackward from "@/components/home/controlButtons/buttonSkipBackward";
 
-type CustomProps = {
-  playing: boolean;
-};
+type CustomProps = {};
 
-export default function ControlButtons({ playing }: CustomProps) {
+export default function ControlButtons() {
   return (
     <div
       style={{
@@ -19,7 +17,7 @@ export default function ControlButtons({ playing }: CustomProps) {
       }}
     >
       <ButtonSkipBackward />
-      <ButtonPlayPause playing={playing} />
+      <ButtonPlayPause />
       <ButtonSkipForward />
     </div>
   );

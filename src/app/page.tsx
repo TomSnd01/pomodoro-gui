@@ -15,7 +15,7 @@ export default function Home() {
         timer={"22:51"}
         cycleCount={"2/4"}
       />
-      <ControlButtons playing={false} />
+      <ControlButtons />
       <VolumeSlider />
     </main>
   );

@@ -3,9 +3,11 @@ use dirs::config_dir;
 use serde::{Serialize, Deserialize};
 use serde_json;
 use std::fs;
+use std::fs::File;
+use std::io::BufReader;
 
 #[derive(Serialize, Deserialize)]
-struct SettingsData {
+pub struct SettingsData {
     focus_duration: usize,
     short_break: usize,
     long_break: usize,
@@ -42,4 +44,36 @@ pub fn get_config_dir() -> PathBuf {
     }
 
     config_path
+}
+
+#[tauri::command]
+pub fn get_config_data() -> String {
+    let config_path = get_config_dir();
+    let mut data_path = config_path;
+    data_path.push("settingsData.json");
+
+    fs::read_to_string(data_path).unwrap()
+}
+
+#[tauri::command]
+pub fn set_config_data(target: &str, value: usize) {
+    let config_path = get_config_dir();
+    let mut data_path = config_path;
+    data_path.push("settingsData.json");
+
+    let file = File::open(&data_path).expect("File not found");
+    let reader = BufReader::new(file);
+    let mut data: SettingsData = serde_json::from_reader(reader).expect("Error reading data");
+
+    match target {
+        "focus_duration" => data.focus_duration = value,
+        "short_break" => data.short_break = value,
+        "long_break" => data.long_break = value,
+        "cycle_count" => data.cycle_count = value,
+        _ => println!("Field not found"),
+    }
+
+    let json_string = serde_json::to_string_pretty(&data).expect("Unable to serialize json string");
+
+    fs::write(data_path, json_string).expect("Unable to write to file")
 }

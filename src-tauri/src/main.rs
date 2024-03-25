@@ -1,13 +1,12 @@
 // Prevents additional console window on Windows in release, DO NOT REMOVE!!
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
-use settings_page::{create_default_config, get_config_dir};
+use settings_page::{create_default_config};
 
 fn main() {
-  get_config_dir();
   create_default_config();
   tauri::Builder::default()
-    .invoke_handler(tauri::generate_handler![play_pause])
+    .invoke_handler(tauri::generate_handler![settings_page::set_config_data, settings_page::get_config_data])
     .run(tauri::generate_context!())
     .expect("error while running tauri application");
 
@@ -15,8 +14,3 @@ fn main() {
 
 mod home_page;
 mod settings_page;
-
-#[tauri::command]
-fn play_pause() {
-  println!("Hello");
-}
