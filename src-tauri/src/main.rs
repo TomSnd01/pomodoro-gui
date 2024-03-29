@@ -9,7 +9,6 @@ fn main() {
     .invoke_handler(tauri::generate_handler![settings_page::set_config_data, settings_page::get_config_data])
     .run(tauri::generate_context!())
     .expect("error while running tauri application");
-
 }
 
 mod home_page;
