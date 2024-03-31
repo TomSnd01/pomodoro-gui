@@ -6,7 +6,7 @@ use settings_page::{create_default_config};
 fn main() {
   create_default_config();
   tauri::Builder::default()
-    .invoke_handler(tauri::generate_handler![settings_page::set_config_data, settings_page::get_config_data])
+    .invoke_handler(tauri::generate_handler![settings_page::set_config_data, settings_page::get_config_data, home_page::short_break_notification])
     .run(tauri::generate_context!())
     .expect("error while running tauri application");
 }

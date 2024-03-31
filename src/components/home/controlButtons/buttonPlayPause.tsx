@@ -11,7 +11,9 @@ export default function ButtonPlayPause() {
 
   function handleClick() {
     setPlaying(!playing);
-    invoke("play_pause", { name: "Next.js" }).catch(console.error);
+    invoke("short_break_notification", { name: "Next.js" }).catch(
+      console.error
+    );
   }
 
   return (

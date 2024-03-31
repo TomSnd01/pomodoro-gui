@@ -24,6 +24,7 @@ let
     rustc
     rustup
     nodejs_21
+    alsa-lib
   ];
 in
 pkgs.mkShell {
