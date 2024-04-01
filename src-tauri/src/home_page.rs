@@ -12,6 +12,7 @@ pub fn short_break_notification() {
     .summary("Time for a break!")
     .body("The focus phase has ended, start your short break")
     .appname("Pomodoro")
+    .icon("/home/tosa/Desktop/dev/pomodoro-gui/src-tauri/icons/128x128.png")
     .timeout(Timeout::Milliseconds(7500))
     .show().unwrap();
   play_break_sound();
