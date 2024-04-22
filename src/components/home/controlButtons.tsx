@@ -3,13 +3,16 @@ import ButtonSkipForward from "@/components/home/controlButtons/buttonSkipForwar
 import ButtonSkipBackward from "@/components/home/controlButtons/buttonSkipBackward";
 import styles from "./page.module.css";
 
-type CustomProps = {};
+type CustomProps = {
+  playing: boolean;
+  setPlaying: React.Dispatch<React.SetStateAction<boolean>>;
+};
 
-export default function ControlButtons() {
+export default function ControlButtons({ playing, setPlaying }: CustomProps) {
   return (
     <div className={styles.controlButtons}>
       <ButtonSkipBackward />
-      <ButtonPlayPause />
+      <ButtonPlayPause playing={playing} setPlaying={setPlaying} />
       <ButtonSkipForward />
     </div>
   );
