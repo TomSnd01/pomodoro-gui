@@ -6,7 +6,7 @@ type CustomProps = {};
 export default function ButtonSkipForward() {
   return (
     <button className={styles.svgIcon}>
-      <SkipForwardIcon size={24} />
+      <SkipForwardIcon size={30} />
     </button>
   );
 }

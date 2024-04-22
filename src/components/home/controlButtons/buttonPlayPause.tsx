@@ -22,7 +22,7 @@ export default function ButtonPlayPause() {
       className={styles.svgIcon}
       onClick={handleClick}
     >
-      {playing ? <PauseIcon size={34} /> : <PlayIcon size={34} />}
+      {playing ? <PauseIcon size={42} /> : <PlayIcon size={34} />}
     </button>
   );
 }

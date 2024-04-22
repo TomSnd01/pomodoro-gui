@@ -21,6 +21,7 @@ tauri = { version = "1.6.1", features = [ "window-start-dragging", "window-unmin
 dirs = "5.0.1"
 notify-rust = "4.10.0"
 rodio = "0.17.3"
+tempfile = "3.10.1"
 
 
 [features]
